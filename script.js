@@ -20,7 +20,7 @@ function getComputerChoice() {
             break;
     }
 }
-function determineGameWinner(userChoice, computerChoice) {
+function determineWinner(userChoice, computerChoice) {
     if (userChoice === computerChoice) {
         return "The game is a tie!";
     }
@@ -49,24 +49,24 @@ function determineGameWinner(userChoice, computerChoice) {
 
 function playerScore() {
     let playerScore = 0;
-    if (determineGameWinner() === "You won!") {
+    if (determineWinner() === "You won!") {
         playerScore += 1;
     }
 }
 
 function computerScore() {
     let computerScore = 0;
-    if (determineGameWinner() === "The computer won!") {
+    if (determineWinner() === "The computer won!") {
         computerScore += 1;
     }
 }
 
 const playGame = () => {
-    const userChoice = getUserChoice("bomb");
+    const userChoice = getUserChoice("rock");
     const computerChoice = getComputerChoice();
     console.log("You threw: " + userChoice);
     console.log("The computer threw: " + computerChoice);
-    console.log(determineGameWinner(userChoice, computerChoice));
+    console.log(determineWinner(userChoice, computerChoice));
     console.log("Your Wins: " + playerScore());
     console.log("Computer Wins: " + computerScore());
 };
