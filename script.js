@@ -48,16 +48,16 @@ function determineWinner(userChoice, computerChoice) {
 }
 
 function playerScore() {
-    let playerScore = 0;
+    let player = 0;
     if (determineWinner() === "You won!") {
-        playerScore += 1;
+        player += 1;
     }
 }
 
 function computerScore() {
-    let computerScore = 0;
+    let computer = 0;
     if (determineWinner() === "The computer won!") {
-        computerScore += 1;
+        computer += 1;
     }
 }
 
