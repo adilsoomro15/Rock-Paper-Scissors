@@ -1,0 +1,10 @@
+body {
+ background-image:linear-gradient(rgb(59, 59, 59), rgb(32, 32, 32), black);
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+.items {
+    background-color: rgb(34, 34, 34);
+    border-radius: 0.3rem;
+    padding: 15px;
+}
