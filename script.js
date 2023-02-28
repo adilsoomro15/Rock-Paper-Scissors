@@ -51,6 +51,8 @@ function playerScore() {
     let player = 0;
     if (determineWinner() === "You won!") {
         player += 1;
+    } else {
+        
     }
 }
 
@@ -58,6 +60,8 @@ function computerScore() {
     let computer = 0;
     if (determineWinner() === "The computer won!") {
         computer += 1;
+    } else {
+        
     }
 }
 
