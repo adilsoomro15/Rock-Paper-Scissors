@@ -65,13 +65,13 @@ function computerScore() {
     }
 }
 
-const playGame = () => {
-    const userChoice = getUserChoice();
+const playGame = (userInput) => {
+    const userChoice = getUserChoice(userInput);
     const computerChoice = getComputerChoice();
     console.log("You threw: " + userChoice);
+    //Add get element by id to change the text in the span
     console.log("The computer threw: " + computerChoice);
     console.log(determineWinner(userChoice, computerChoice));
     console.log("Your Wins: " + playerScore());
     console.log("Computer Wins: " + computerScore());
 };
-playGame();
