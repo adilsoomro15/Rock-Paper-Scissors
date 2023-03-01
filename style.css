@@ -8,3 +8,7 @@ body {
     border-radius: 0.3rem;
     padding: 15px;
 }
+.info {
+    background-color:black;
+    border-radius: 0.8rem;
+}
