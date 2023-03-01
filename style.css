@@ -12,3 +12,6 @@ body {
     background-color:black;
     border-radius: 0.8rem;
 }
+.infocol {
+    border: 2px rgb(71, 71, 71) solid;
+}

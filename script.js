@@ -66,7 +66,7 @@ function computerScore() {
 }
 
 const playGame = () => {
-    const userChoice = getUserChoice("rock");
+    const userChoice = getUserChoice();
     const computerChoice = getComputerChoice();
     console.log("You threw: " + userChoice);
     console.log("The computer threw: " + computerChoice);
