@@ -46,32 +46,28 @@ function determineWinner(userChoice, computerChoice) {
         }
     }
 }
-
-function playerScore() {
-    let player = 0;
-    if (determineWinner() === "You won!") {
+let player = 0;
+let computer = 0;
+function playerScore(userChoice, computerChoice) {
+    if (determineWinner(userChoice, computerChoice) === "You won!") {
         player += 1;
-    } else {
-        
-    }
+    } 
+    return player;
 }
 
-function computerScore() {
-    let computer = 0;
-    if (determineWinner() === "The computer won!") {
+function computerScore(userChoice, computerChoice) {
+    if (determineWinner(userChoice, computerChoice) === "The computer won!") {
         computer += 1;
-    } else {
-        
-    }
+    } 
+    return computer;
 }
 
 const playGame = (userInput) => {
     const userChoice = getUserChoice(userInput);
     const computerChoice = getComputerChoice();
-    console.log("You threw: " + userChoice);
-    //Add get element by id to change the text in the span
-    console.log("The computer threw: " + computerChoice);
-    console.log(determineWinner(userChoice, computerChoice));
-    console.log("Your Wins: " + playerScore());
-    console.log("Computer Wins: " + computerScore());
+    document.getElementById("playerThrew").innerHTML = userChoice;
+    document.getElementById("computerThrew").innerHTML = computerChoice;
+    document.getElementById("winner").innerHTML = determineWinner(userChoice, computerChoice);
+    document.getElementById("yourWins").innerHTML = playerScore(userChoice, computerChoice);
+    document.getElementById("computerWins").innerHTML = computerScore(userChoice, computerChoice);
 };
